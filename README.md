@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! This project showcases my web development skills through interactive projects, a dynamic About Me section, and a modern dark-themed design.
 
-## 🌟 Features
+## Features
 
 - **Project Showcase:**  
   - Jewelry Store – interactive shop with wishlist & cart  
@@ -24,5 +24,5 @@ Welcome to my personal portfolio! This project showcases my web development skil
 - CSS (Flexbox, Grid, transitions, hover effects)  
 - PHP (for individual project pages)  
 - JavaScript (optional for interactive features, not included in base project) )
-## 📂 Project Structure
+## Project Structure
 
