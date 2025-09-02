@@ -244,6 +244,22 @@ footer {
   transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(0, 230, 204, 0.5);
 }
+.contact p.copyable {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.contact p.copyable:hover {
+    color: #00e6cc;
+}
+
+.copy-message {
+    display: none;
+    color: #00e6cc;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
 
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {

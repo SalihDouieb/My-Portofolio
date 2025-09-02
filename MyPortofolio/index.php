@@ -56,10 +56,20 @@
         I specialize in front-end development, ensuring that every project I work on is visually appealing and functionally robust.
          When I'm not coding, I enjoy Kickboksing, playing video games and watching anime. Feel free to explore my portfolio and reach out if you'd like to collaborate!</p>
     </section>
+<section class="about-me contact">
+    <h2>Contact</h2>
+    <p class="copyable" data-copy="microsalih@outlook.com">Email: microsalih@outlook.com</p>
+    <p class="copyable" data-copy="91741@roc-teraa.nl">School Email: 91741@roc-teraa.nl</p>
+    <p class="copyable" data-copy="+31 6 87963332">Phone: +31 6 87963332</p>
+    <h3> click to copy 😉</h3>
+    <span class="copy-message">Copied!</span>
+</section>
 </article>
 
   <footer>
     <p>&copy; 2025 My Portfolio. All rights reserved.</p>
   </footer>
+  <script src="lightbox.js"></script>
+
 </body>
 </html>
