@@ -8,14 +8,14 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: #111; /* dark background */
-  color: #eee;      /* light text */
+  background: #111;
+  color: #eee;
 }
 
 /* ---------------- HEADER ---------------- */
 header {
-  background: #000; /* black header */
-  color: #00bfa5;   /* teal accent */
+  background: #000;
+  color: #00bfa5;
   padding: 1.5rem 1rem;
   text-align: center;
   border-bottom: 2px solid #00bfa5;
@@ -23,7 +23,7 @@ header {
 
 header h1 {
   margin-bottom: 0.5rem;
-  color: #00e6cc; /* brighter teal for title */
+  color: #00e6cc;
 }
 
 nav ul {
@@ -39,6 +39,7 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.2s, border-bottom 0.2s;
+  padding: 0.3rem 0.5rem;
 }
 
 nav a:hover {
@@ -63,8 +64,9 @@ main {
 
 .project-card {
   display: block;
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 3/2;
   border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
@@ -102,6 +104,7 @@ main {
 .card-content h2 {
   margin-bottom: 0.5rem;
   color: #00e6cc;
+  font-size: 1.3rem;
 }
 
 .card-content p {
@@ -189,6 +192,7 @@ footer {
 
 /* ---------------- ABOUT ME ---------------- */
 .about-me {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -201,21 +205,30 @@ footer {
   max-width: 1000px;
   margin: 3rem auto;
   box-shadow: 0 0 20px rgba(0, 230, 204, 0.5);
+  overflow: hidden;
 }
 
-.about-me img {
+/* Profile image stays fixed */
+.about-me img[alt="Your Name"] {
   width: 220px;
   height: 220px;
+  border-radius: 50%;
+  border: 3px solid #00e6cc;
+  box-shadow: 0 0 25px rgba(0, 230, 204, 0.8);
+  z-index: 2;
+  position: relative;
+}
+
+/* Floating orbiting images */
+.about-me img:not([alt="Your Name"]) {
+  position: absolute;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #00e6cc;
-  box-shadow: 0 0 15px rgba(0, 230, 204, 0.6);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.about-me img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 230, 204, 0.8);
+  box-shadow: 0 0 20px rgba(0, 230, 204, 0.7);
+  transition: transform 0.5s ease-in-out;
 }
 
 .about-me h2 {
@@ -244,22 +257,23 @@ footer {
   transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(0, 230, 204, 0.5);
 }
+
+/* ---------------- CONTACT ---------------- */
 .contact p.copyable {
-    cursor: pointer;
-    transition: color 0.2s;
+  cursor: pointer;
+  transition: color 0.2s;
 }
 
 .contact p.copyable:hover {
-    color: #00e6cc;
+  color: #00e6cc;
 }
 
 .copy-message {
-    display: none;
-    color: #00e6cc;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
+  display: none;
+  color: #00e6cc;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
-
 
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
@@ -283,6 +297,41 @@ footer {
   }
 
   .project-card {
-    padding: 1.5rem;
+    padding: 1rem;
+  }
+
+  .about-me img:not([alt="Your Name"]) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me img[alt="Your Name"] {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-me img:not([alt="Your Name"]) {
+    width: 70px;
+    height: 70px;
+  }
+
+  .about-me p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .card-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .card-content p {
+    font-size: 0.85rem;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
   }
 }
